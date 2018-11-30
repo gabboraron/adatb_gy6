@@ -1,4 +1,4 @@
-# GY8
+# 7. óra | GY6
 > fájl: http://vopraai.web.elte.hu/tananyag/adatb1819/7.ora/feladat.txt
 
 `````SQL
@@ -30,7 +30,8 @@ idegen kulcs:
 CONSTRAINT sportcsapatok_fk
  Foreign key (csapat id)
  references sportcsapatok(csapat_id)
-```` ahol a `cspat_id` az elsődleges kulcs a `sportcsapatok`ban:
+`````
+ahol a `cspat_id` az elsődleges kulcs a `sportcsapatok`ban:
 ````SQL
  CONSTRAINT sportcs_pk PRIMARY KEY (csapat_id)
 ````
@@ -69,24 +70,21 @@ CREATE TABLE jatekosok
 
 `ALTER TABLE` parancs után lehet módosításokat elrendelni, pl: 
 `````SQL
-
 ALTER TABLE proba123 DROP COLUMN nev;
 ALTER TABLE proba123 ADD / MODIFY nev VARCHAR(30);
-
 `````
 
 `TRUNCATE`tel lehet törölni úgy hogy közben a struktúra megmarad csak a tábla vész el
 ````SQL
-
 TRUNCATE TABLE proba123;
 ````
 
-teljs törlés : 
+Teljes törlés : 
 ````SQL
 DROP TABLE proba123;
 
 ````
-feltételes törlés:
+Feltételes törlés:
 ````SQL
 
 DELETE FROM proba123 WHERE nev='Peti';
